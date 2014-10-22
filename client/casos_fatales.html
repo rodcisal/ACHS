@@ -1,0 +1,16 @@
+<template name="casosFatales">
+  <h1 class="bottom-decoration">Casos Fatales</h1>
+    <div class="lista-casos">
+      {{#if fichasCargadas}}
+        {{#each fichas}}
+          {{> caso}}
+        {{/each}}
+      {{else}}
+        <div class="cargando">
+          <img src="cargando.gif">
+        </div>
+      {{/if}}
+    </div>
+</template>
+
+

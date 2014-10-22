@@ -1,0 +1,13 @@
+<template name="caso">
+  <article class="caso">
+    <h3><a href="{{pathFor 'mostrarCaso'}}">{{titulo}}</a></h3>
+    <span>
+      <img src="{{imagen_url}}" class="imagen-ficha-home">
+    </span>
+    <div class="numero-ficha"> Ficha {{numero_ficha}} </div>
+    <p class="descripcion-caso">
+      {{descripcion_accidente}}
+    </p>
+    <a href="{{pathFor 'mostrarCaso'}}" class="leer-mas"> Leer más <i class="fa fa-chevron-right"></i></a>
+  </article>
+</template>

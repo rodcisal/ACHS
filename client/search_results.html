@@ -1,0 +1,17 @@
+<template name="searchResults">
+  <section id="search-results">
+    <div class="container">
+      {{#if busqueda}}
+        {{#each busqueda}}
+          <h1 class="casos-encontrados">Casos Encontrados:</h1>
+          <div class="search-results-unit">
+            <h3><a href="{{pathFor 'mostrarCaso' }}">{{titulo}}</a></h3>
+            <img src="{{imagen_url}}">
+          </div>
+        {{/each}}
+      {{else}}
+        <span class="no-hay-resultados"> Intenta con otra palabra :/ </span>
+      {{/if}}
+    </div>
+  </section>
+</template>

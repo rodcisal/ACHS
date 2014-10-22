@@ -1,0 +1,1275 @@
+  /* CSS declarations go here */
+
+/* Reset */
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
+dt, dd, blockquote, address{
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('OpenSans-Regular-webfont.eot');
+  src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('OpenSans-Regular-webfont.woff') format('woff'),
+       url('OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url('OpenSans-Light-webfont.eot');
+  src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('OpenSans-Light-webfont.woff') format('woff'),
+       url('OpenSans-Light-webfont.ttf') format('truetype'),
+       url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+font-family: 'Helvetica Neue LT Com 77 Bold Condensed';
+font-style: normal;
+font-weight: normal;
+src: url('Helvetica-Neue-LT.woff') format('woff');
+}
+
+@helvetica : 'Helvetica Neue LT Com 77 Bold Condensed';
+@open : 'open_sanslight';
+
+body {
+  font-family: 'open_sansregular';
+}
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.container.caso-grave {
+  .ficha-caso {
+    border-bottom-color: #4979bd;
+
+    > h1 {
+      border-bottom-color: #4979bd;
+      background-image: none;
+      background: none;
+      padding-left: 10px;
+    }
+
+    .descripcion-accidente h3,
+    .causas-accidente h3,
+    .right-panel-contenido h3 {background-color: #4979bd;}
+
+    .para-trabajadores h4,
+    .para-empresas h4 {color: #4979bd; }
+    .descargar-pdf {
+      background-color: #4979bd;
+      border-bottom-color: #335099;
+    }
+    .numero-ficha-circulo {
+      background-color: #335099;
+    }
+  }
+}
+
+
+header {
+  height: 110px;
+  background-color: #fff;
+  -webkit-box-shadow: -5px 3px 8px rgba(0,0,0,.27);
+  -moz-box-shadow: -5px 3px 8px rgba(0,0,0,.27);
+  box-shadow: -5px 3px 8px rgba(0,0,0,.27);
+  width: 100%;
+  color: #606060;
+  position: relative;
+  z-index: 1;
+
+
+  > .container {
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: left 10px;
+
+    > .slogan {
+      padding-left: 100px;
+      text-transform: uppercase;
+      color: #006931;
+      width: 550px;
+      float: left;
+      font-size: 36px;
+      font-family: @helvetica;
+      line-height: 35px;
+      letter-spacing: -1px;
+      padding-top: 24px;
+
+      a, a:link, a:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  ul li {
+    float: left;
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+
+    a {
+      color: #5F5F5F;
+      text-decoration: none;
+      -moz-transition: all .4s ease-in;
+      -o-transition: all .4s ease-in;
+      -webkit-transition: all .4s ease-in;
+      transition: all .4s ease-in;
+
+      &:hover {
+        color: #006931;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+    height: 100%;
+    padding-top: 60px;
+
+    &.menu {
+      overflow: visible;
+    }
+  }
+
+  .contacto {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 32px;
+    padding-left: 32px;
+    position: relative;
+    padding-top: 7px;
+    font-weight: normal;
+
+    &:before {
+      content: "";
+      height: 66px;
+      width: 22px;
+      background-image: url('signo-interrogacion.png');
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 27px;
+    padding-left: 32px;
+    line-height: 23px;
+  }
+}
+
+.principal-busqueda {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  background-color: #4979bd;
+  transition: background-color 0.3s ease-in;
+
+  &.fondo-rojo {
+    background-color: #ED5250;
+  }
+
+  &.fondo-azul {
+    background-color: #4979bd;
+  }
+
+  > .container {
+    background-image: url('imagen-principal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
+.principal-contenido {
+  min-height: 400px;
+  h1 {
+    font-size: 30px;
+    color: #606060;
+    border-bottom: 2px solid #dedfd5;
+    position: relative;
+  }
+}
+
+.bottom-decoration {
+  font-family: @helvetica;
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    height: 4px;
+    width: 185px;
+    background-color: #f0333e;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+}
+
+.cifras {
+  h1 {
+    font-size: 27px;
+  }
+  .bottom-decoration:after {
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+
+  ul li {
+    width: 100px;
+    height: 190px;
+    float: left;
+    text-align: center;
+    margin-right: 34px;
+    font-size: 12px;
+
+    p {
+      text-transform: uppercase;
+      color: #919191;
+      font-family: 'open_sanslight';
+      padding-top: 30px;
+
+    }
+
+    span {
+      display: block;
+      height: 100px;
+      border-radius: 50%;
+      background-image: url('sprite-iconos.png');
+      background-repeat: no-repeat;
+      background-position: -85px -10px;
+      background-size: 550px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .agricola span {
+    background-position: -50px -5px;
+  }
+
+  .construccion span {
+    background-position: -162px -5px
+  }
+
+  .educacion span {
+    background-position: -276px -5px;
+  }
+
+  .energia-y-telco span {
+    background-position: -401px -5px;
+  }
+
+  .forestal span {
+    background-position: -8px -151px;
+  }
+
+  .gubernamental {
+    width: 110px;
+    span {
+      background-position: -115px -151px;
+    }
+  }
+
+  .industria span {
+    background-position: -222px -151px;
+  }
+
+  .mineria {
+    margin-left: 80px;
+    span {
+      background-position: -329px -151px;
+    }
+  }
+
+  .pesca {
+    span {
+      background-position: -437px -151px;
+    }
+  }
+
+  .retail span {
+    background-position: -50px -300px;
+  }
+
+  .financiero span {
+    background-position: -161px -300px;
+  }
+
+  .salud span {
+    background-position: -278px -300px;
+  }
+
+  .transporte span {
+    background-position: -400px -300px;
+  }
+}
+
+.lista-casos {
+  background-color: #f4f4f4;
+  padding: 30px 25px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+
+
+.caso {
+  width: 280px;
+  display: inline-block;
+  vertical-align: top;
+  color: #777777;
+  margin-right: 25px;
+  margin-bottom: 5px;
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  span {
+    display: block;
+    max-height: 118px;
+    overflow: hidden;
+  }
+
+  h3 {
+    font-size: 17px;
+    padding-bottom: 15px;
+    line-height: 17px;
+    font-family: @helvetica;
+    font-weight: normal;
+    height: 60px;
+    overflow: hidden;
+
+    a:link, a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .numero-ficha {
+    font-family: 'open_sanslight';
+    font-size: 14px;
+  }
+
+
+
+  .descripcion-caso {
+    font-size: 12px;
+    padding-top: 5px;
+    max-height: 55px;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      content: "...";
+      right: 1px;
+      bottom: 1px;
+      position: absolute;
+      color: #5f5f5f;
+      background-color: #f4f4f4;
+      width: 28px;
+      text-align: center;
+    }
+  }
+}
+
+.numero-ficha-circulo {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  background-color: #f43f44;
+  color: #ffffff;
+  padding-top: 15px;
+  position: absolute;
+  right: -9px;
+  top: 71px;
+}
+
+
+.busqueda {
+  width: 440px;
+  margin: 0 auto;
+  height: 50px;
+  position: absolute;
+  right: 0;
+
+  &.rojo:before {
+    background-color: #ED5250;
+  }
+
+  &.azul:before {
+    background-color: #4979bd;
+  }
+
+  &:before {
+    content: "";
+    height: 65px;
+    width: 480px;
+    background-color: #4979bd;
+    position: absolute;
+    left: -20px;
+    transition: background-color 0.4s ease-in;
+  }
+}
+
+#buscarContenido {
+  height:100%;
+  width: 100%;
+  font-size: 20px;
+  line-height: 100%;
+  padding-left: 12px;
+  z-index: 2;
+  position: absolute;
+
+  &::-webkit-input-placeholder {
+    color: #006932;
+    font-family: 'open_sanslight';
+  }
+}
+
+#buscar {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  display: inline-block;
+  width: 62px;
+  height: 48px;
+  z-index: 3;
+  background-color: #adaea5;
+  background-image: -webkit-linear-gradient(bottom, #c4c4c4, #f1f1f1);
+  background-image: -moz-linear-gradient(bottom, #c4c4c4, #f1f1f1);
+  background-image: -o-linear-gradient(bottom, #c4c4c4, #f1f1f1);
+  background-image: linear-gradient(to top, #c4c4c4, #f1f1f1);
+
+  i {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #b0b0b0;
+  }
+}
+
+.leer-mas {
+  width: 273px;
+  height: 43px;
+  background-color: #f0333e;
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  line-height: 43px;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 4px solid #f0333e;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+.casos-fatales {
+  h1 {
+    &:after {
+      width: 200px;
+    }
+  }
+}
+
+.apariciones-en-medios {
+  h1:after {
+    width: 390px;
+  }
+}
+
+
+
+.imagen-ficha-home {
+  max-width: 280px;
+}
+
+
+.ficha-caso {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f0333e;
+  margin-bottom: 30px;
+  position: relative;
+  h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 55px;
+    background: url('signo-exclamacion.png') no-repeat left center;
+    border-bottom: 4px solid #f0333e;
+    margin-bottom: 15px;
+    font-family: @helvetica;
+    color: #606060;
+  }
+
+  h3 {
+    background-color: #f43f44;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px 0;
+  }
+}
+
+.left-panel {
+  width: 260px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f1ece5;
+
+  p {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+}
+
+.right-panel {
+  width: 685px;
+  vertical-align: top;
+  display: inline-block;
+  overflow: hidden;
+
+  .imagen-principal {
+    float: right;
+  }
+
+  img {
+    max-width: 650px;
+  }
+}
+
+
+.right-panel-contenido {
+  width: 650px;
+  float: right;
+}
+
+.causas-accidente {
+  font-size: 13px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 10px;
+
+    li {
+      position: relative;
+      padding-left: 15px;
+      padding-bottom: 10px;
+      &:before, &:after {
+        content: "\f054";
+        font-family: "fontAwesome";
+        color: red;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        font-size: 6px;
+      }
+
+      &:after {
+        left: 3px;
+      }
+    }
+  }
+}
+
+.para-trabajadores,
+.para-empresas {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+
+  h4 {
+    font-size: 18px;
+    color: #f43f44;
+    padding-top: 15px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+}
+
+.para-trabajadores {
+  margin-right: 5%;
+}
+
+.para-empresas, .para-trabajadores {
+  ol {
+    margin: 0;
+    padding: 0;
+    counter-reset: li-counter;
+    list-style-type: none;
+  }
+
+  ol > li {
+    position: relative;
+    font-size: 13px;
+    padding-bottom: 15px;
+    text-align: left;
+    padding-left: 35px;
+
+    &:before {
+      color: #ffffff;
+      background: #f43f44;
+      content: counter(li-counter);
+      counter-increment: li-counter;
+      position: absolute;
+      left: 0;
+      width: 10px;
+      font-size: 7px;
+      border-radius: 50%;
+      top: 7px;
+      text-align: center;
+    }
+  }
+}
+
+.casos-fatales.casos-graves {
+  .bottom-decoration:after {background-color: #4C77C3;}
+  .leer-mas {
+    background-color: #4C77C3;
+    border-bottom: 4px solid #3669b3;
+  }
+}
+
+.estadisticas {
+  position: relative;
+  .bottom-decoration:after {
+    background-color: #187745;
+  }
+  ul {
+    font-size: 0;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  ul li {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    height: 175px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #919191;
+    position: relative;
+
+    &:before {
+      height: 120px;
+      width: 120px;
+      content: "";
+      border-radius: 50%;
+      background: #f7f7f7;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      box-shadow: 1px 1px 1px #d1d0d0;
+    }
+  }
+
+  li {
+    &:after {
+      content: "";
+      background-image: url(/icono1.png);
+      width: 120px;
+      height: 120px;
+      display:block;
+      background-repeat: no-repeat;
+      top: 11px;
+      position: absolute;
+      left: 70px;
+    }
+  }
+
+  li:nth-child(2) {
+    &:after {
+      background-image: url(/icono2.png);
+      top: 32px;
+      left: 63px;
+    }
+  }
+
+  li:nth-child(3) {
+    &:after {
+      background-image: url(/icono3.png);
+      left: 92px;
+    }
+  }
+
+  li:nth-child(4) {
+    &:after {
+      background-image: url(/icono4.png);
+      top: 28px;
+      left: 62px;
+    }
+  }
+
+  li:nth-child(5) {
+    &:after {
+      background-image: url(/icono5.png);
+      top: 29px;
+      left: 66px;
+    }
+  }
+
+}
+
+
+.boton-accidentes-fatales {
+  width: 300px;
+  height: 47px;
+  line-height: 47px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  background-color: #2f8457;
+  border-bottom: 4px solid #006c33;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+
+  i {
+    margin-left: 7px;
+    font-size: 22px;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+
+#search-results {
+  margin-bottom: 50px;
+  display: none;
+  > .container {
+    background-color: #F1F1F1;
+    padding-bottom: 80px;
+  }
+}
+
+.spinner30 {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 8px;
+}
+
+.no-hay-resultados {
+  font-size: 20px;
+  font-family: @open;
+  color: #006931;
+  display: block;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.search-results-unit {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  text-align: center;
+  padding-top: 35px;
+  margin-left: 40px;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-family: @helvetica;
+    text-align: left;
+
+    a {
+      text-decoration: none;
+      color: rgb(119, 119, 119);
+    }
+  }
+
+  > img {
+    max-width: 190px;
+  }
+
+}
+
+.quarters-wrapper {
+  font-size: 0;
+}
+
+.quarter {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 60px;
+  position: relative;
+  padding-bottom: 30px;
+
+  &:first-child, &:nth-child(3) {
+    margin-right: 4%;
+  }
+
+  > h3 {
+    padding-top: 17px;
+    font-size: 23px;
+  }
+
+  &:before {
+    content: "";
+    background-image: url('sprite-iconos-2.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.suspender:before {
+    background-position: -24px -22px;
+  }
+
+  &.informar:before {
+    background-position: -111px -22px;
+  }
+
+  &.controlar:before {
+    background-position: -205px -22px;
+  }
+
+  &.entregar:before {
+    display: none;
+  }
+
+  > p {
+    font-size: 14px;
+
+    ul li {
+      font-size: 12px;
+    }
+  }
+}
+
+.en-caso-accidente {
+  position: relative;
+  .quarter > h3 {
+    font-family: @helvetica;
+    text-transform: uppercase;
+    color: #ed4729;
+  }
+
+  > a.boton-accidentes-fatales {
+    background-color: #f14751;
+    border-bottom-color: #db000d;
+    top: 38px;
+  }
+
+  .bottom-decoration:after {
+    width: 515px;
+  }
+}
+
+
+.entregar {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0;
+  > h3 {
+    font-size: 14px;
+    font-family: @helvetica;
+    margin-left: 60px;
+    background-color: #fbdad4;
+    padding-left: 10px;
+    padding-top: 20px;
+    color: #ed4729;
+    letter-spacing: -1px;
+  }
+
+  > ul li {
+    font-size: 12px;
+    padding-left: 10px;
+
+    &:before {
+      content: "-";
+      color: #ed4729;
+      padding-right: 3px;
+    }
+  }
+
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-left: 60px;
+    background-color: #fbdad4;
+    padding-bottom: 30px;
+  }
+}
+
+.en-caso-accidente-legend {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+
+.red-color {
+  font-weight: bold;
+  color: #ed4729;
+  position: relative;
+
+  &:before {
+    content: "\f078";
+    font-family: 'fontAwesome';
+    font-size: 25px;
+    position: absolute;
+    top: 16px;
+    left: 30%;
+    color: #fbdad4;
+  }
+}
+
+
+.menciones {
+  padding-top: 20px;
+}
+
+
+footer {
+  height: 100px;
+  background: #404040;
+  color: #999999;
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 0;
+
+    > a {
+      opacity: 0.7;
+      -webkit-transition: opacity 0.6s ease-in;
+      transition: opacity 0.6s ease-in;
+
+      &:hover { opacity: 1; }
+    }
+
+    .telefono-mail span, .telefono-mail a {
+      opacity: 0.8;
+    }
+  }
+
+  a, span {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+
+
+  .fa {
+    font-size: 60px;
+  }
+
+  .facebook {
+    margin-right: 20px;
+  }
+
+  a:link, a:visited, a:active {
+    color: inherit;
+  }
+
+  .telefono-mail {
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .telefono {
+    padding-left: 60px;
+    position: relative;
+    padding-top: 5px;
+
+    &:before {
+      content: "\f098";
+      font-family: 'fontAwesome';
+      position: absolute;
+      left: 0;
+      font-size: 60px;
+      top: 0;
+    }
+  }
+
+  .mail {
+    padding-left: 120px;
+    position: relative;
+    padding-top: 5px;
+    text-decoration: none;
+    &:before {
+      content: "\f199";
+      font-family: "fontAwesome";
+      position: absolute;
+      left: 60px;
+      font-size: 60px;
+      top: 0;
+    }
+
+    &:after {
+      content: "|";
+      font-size: 35px;
+      position: absolute;
+      left: 10px;
+      top: 3px;
+    }
+  }
+
+}
+
+.botones {
+  width: 100%;
+  text-align: right;
+
+  .descargar {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f14751;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    height: 45px;
+    text-decoration: none;
+    border-bottom: 4px solid #db000d;
+    font-size: 18px;
+    cursor: pointer;
+    width: 258px;
+    margin-right: 30px;
+    margin-top: 20px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .descargar-herramientas {
+    margin-left: 15px;
+  }
+}
+
+
+.cargando {
+  min-height: 300px;
+  padding-top: 130px;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.search-bar {
+  .container {
+    position: relative;
+  }
+}
+
+.banner {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    li {
+      overflow: hidden;
+      list-style: none;
+      height: 100%;
+      width: 100%;
+      font-size: 40px;
+      color: #fff;
+      float: left;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left:0;
+      > img { margin: 0 auto; }
+    }
+  }
+}
+
+
+.cycle-slideshow {
+  width: 950px;
+  margin: 0 auto;
+  > img:not(:first-child) {
+    display: none;
+  }
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+
+
+.casos-encontrados {
+  font-size: 20px;
+  text-align: center;
+  color: #888888;
+  font-family: 'open_sansregular';
+  padding-top: 30px;
+}
+
+
+.dropdowns {
+  border: 25px solid #4979bd;
+  border-top: 0; 
+  transition: border-color 0.3s ease-in;
+  &.rojo {
+    border-color: #ED5250;
+  }
+
+  &.azul {
+    border-color: #4979bd;
+  }
+
+  .drop {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'open_sansregular';
+    font-size: 20px;
+    color: #888888;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover ul {
+      display: block;
+      cursor: pointer;
+    }
+
+    &.procesos, &.tipos-de-accidente {
+      position: relative;
+      &:before {
+        content: "";
+        width: 2px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        background-color: #c3c3c3;
+        top: 10px;
+      }
+    }
+
+    & .drop-title { 
+      i {
+        color: #c3c3c3;
+        font-size: 12px;
+        float: right;
+        padding-top: 20px;
+        margin-right: 15px;
+      }
+    }
+    ul {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 2;
+      width: 302px;
+      left: -20px;
+      background: #fff;
+      box-shadow: 2px 4px 4px #ccc;
+
+      li {
+        padding-left: 20px;
+        &:hover {
+          background-color: #888;
+          color: #fff;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

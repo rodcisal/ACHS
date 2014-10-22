@@ -1,0 +1,52 @@
+<head>
+  <title>achs</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+</body>
+
+
+<template name="header">
+  <div id="content">
+    <header>
+      <div class="container">
+        <div class="slogan">
+          <a href="{{pathFor 'principal'}}">
+            prevención de accidentes graves y fatales
+          </a>
+        </div>
+        <ul class="menu">
+          <li class="inicio"><a href="{{pathFor 'principal'}}">Inicio</a></li>
+          <li class="legislacion"><a href="#">Legislación</a></li>
+          <li class="medios"><a href="#medios">Medios</a> </li>
+        </ul>
+      </div>
+    </header>
+    <section class="principal">
+      {{> yield}}
+    </section>
+    <footer>
+      <div class="container">
+        <a href="https://www.facebook.com/PrevencionACHS" class="facebook" target="_blank">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a href="https://twitter.com/Segurito_ACHS" target="_blank" class="twitter">
+          <i class="fa fa-twitter-square"></i>
+        </a>
+        <div class="telefono-mail">
+          <span class="telefono">
+            Nº de Emergencia <br>
+            Achs: <span>1404</span>
+          </span>
+          <a href="mailto:alertafatal@achs.cl" class="mail">
+            Correo Electronico: <br>
+            alertafatal@achs.cl
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>
+
+

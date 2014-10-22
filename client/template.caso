@@ -1,0 +1,25 @@
+db.casos.insert({"titulo": "TRABAJADOR FALLECE AL CAER POR ESCALERA AL INTERIOR DE UN EDIFICIO", "descripcion_accidente": "Un trabajador que se encontraba recorriendo las oficinas de un edificio, abre una puerta y no se percata de la existencia de una escalera que lleva hasta el sótano. La escalera no contaba con descanso superior y el trabajador cae de espalda golpeándose fuertemente la cabeza, falleciendo horas más tarde en un centro de salud.","causas_accidente": ["La escalera no contaba con descanso superior.", "La puerta de acceso tenía sentido de apertura hacia la escalera, y no contaba con un visor o ventana que permitiera ver la existencia de ésta desde el exterior.", "Falta de señalización en la puerta que indicara el peligro de caída.", "Desconocimiento de las instalaciones por parte del trabajador y falta de instrucción sobre posibles peligro."],"lecciones_trabajadores": ["Reconocer su lugar de trabajo, identificar los peligros existentes e informarlo de forma inmediata a la jefatura.", "Mantener siempre una conducta de permanente atención a las condiciones de seguridad en las zonas de tránsito y de circulación en el trabajo, especialmente en escaleras y pasillos.", "Informar a los compañeros de trabajo sobre condiciones de peligro que pueden causar un accidente o algún daño a su salud."], "lecciones_empresas": ["Elaborar y mantener un programa de inspección y reconocimiento de peligros, evaluando la probabilidad de que ocurra un accidente y la consecuencia que éste podría tener.", "Señalizar todas las áreas con peligros, especialmente aquellas con acceso a zonas donde han sido identificados riesgos importantes.", "Cumplir las especificaciones en diseño y seguridad en los lugares de trabajo que están establecidas en la Ordenanza General de Urbanismo y Construcciones, al momento de realizar cambios en la planta física de los recintos, remodelaciones o ampliaciones.", "Cumplir con lo establecido en el D.S. 40 e informar a todos los trabajadores, en forma oportuna y antes de iniciar sus labores, sobre los peligros y los riesgos relacionados con su trabajo y la forma de evitarlos.", "Coordinar con el Experto ACHS la implementación de cursos de capacitación sobre: Identificación de peligros y Curso básico en prevención de riesgos."],"numero_ficha": 27, "keywords": ["escalera", "caida", "caidas", "caída"], "link_pdf": "", "link_herramientas": "", "imagen_url": "http://i.imgur.com/nzCPABy.png"})
+
+
+
+
+Evaluar las condiciones de explosividad, oxígeno y toxicidad de atmósfera antes de ingresar a un espacio confinado. el monitoreo debe extenderse durante el tiempo que dure la tarea.
+
+
+Utilizar equipos de respiración autónomos o semiautónomos cuando la concentración de oxígeno es inferior al 20,5%.
+
+Ingresar a un espacio confinado asegurándose que ésta acción es vigilada por otro compañero desde el exterior y establecer un sistema de comunicación.
+
+Usar arnés con cabo de vida unido al exterior.
+
+Establecer un “procedimiento de trabajo” escrito que deberá ser dado a conocer y analizado por el personal involucrado en el trabajo a desarrollar, asegurando la comprensión de todo el equipo que intervendrá.
+
+Establecer un procedimiento de acción frente a emergencias (rescate) al desarrollar tareas en espacios confinados.
+
+Incorporar los peligros (matriz de peligro) y medidas preventivas a aplicar en el procedimiento de trabajo, incluyendo la definición de EPP y equipos a utilizar.
+
+Supervisar permanentemente las tareas críticas. En espacios confinados debe contar con medios de comunicación entre el interior y exterior.
+
+Incorporar la practica de permiso de trabajo para ingreso a espacio confinado.
+
+Coordinar con el Experto ACHS la implementación de cursos de capacitación sobre: prevención de riesgos en espacios confinados.

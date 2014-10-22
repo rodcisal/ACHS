@@ -1,0 +1,51 @@
+<template name="mostrarCaso">
+  <section class="container {{tipo_caso}}">
+    <article class="ficha-caso">
+      <h1>{{titulo}}</h1>
+      <span class="numero-ficha-circulo">FICHA <br>{{numero_ficha}}</span>
+      <p>{{bajada_ficha}} </p>
+      <div class="left-panel">
+        <div class="descripcion-accidente">
+          <h3>Descripción del accidente</h3>
+          <p>{{descripcion_accidente}}</p>
+        </div>
+        <div class="causas-accidente">
+          <h3>Causas del accidente</h3>
+          <ul>
+          {{#each causas_accidente}}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="imagen-principal">
+          <img src="{{imagen_url}}">
+        </div>
+        <div style="clear:both"></div>
+        <div class="right-panel-contenido">
+          <h3>lecciones aprendidas</h3>
+          <div class="para-trabajadores">
+            <h4>Trabajadores</h4>
+            {{#each lecciones_trabajadores}}
+            <ol>
+              <li>{{this}}</li>
+            </ol>
+            {{/each}}
+          </div>
+          <div class="para-empresas">
+            <h4>Empresa</h4>
+            {{#each lecciones_empresas}}
+            <ol>
+              <li>{{this}}</li>
+            </ol>
+            {{/each}}
+          </div>
+          <div class="botones">
+            <a href="{{link_pdf}}" class="descargar descargar-pdf">DESCARGAR PDF <i class="fa fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </article>
+   </section>
+</template>

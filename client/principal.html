@@ -1,0 +1,137 @@
+<template name="principal">
+  <section class="principal-busqueda">
+    <div class="cycle-slideshow">
+      <img src="/imagen-principal.png">
+      <img src="/imagen-principal2.png">
+    </div>
+  </section>
+
+  {{> searchBar}}
+
+
+  {{> searchResults}}
+
+  <section class="principal-contenido">
+    <div class="container casos-fatales">
+     {{> casosFatales}}
+     </div>
+
+
+
+    <div class="container cifras">
+      <h1 class="bottom-decoration">Cantidad de trabajadores fallecidos en accidentes</h1>
+      <ul>
+        <li class="agricola">
+          <span></span>
+          <p>agrícola</p>
+        </li>
+        <li class="construccion">
+          <span></span>
+          <p>construcción</p>
+        </li>
+        <li class="educacion">
+          <span></span>
+          <p>educación</p>
+        </li>
+        <li class="energia-y-telco">
+          <span></span>
+          <p>energía y telecomunicaciones</p>
+        </li>
+        <li class="forestal">
+          <span></span>
+          <p>forestal</p>
+        </li>
+        <li class="gubernamental">
+          <span></span>
+          <p>gubernamental y municipalidades</p>
+        </li>
+        <li class="industria">
+          <span></span>
+          <p>industria</p>
+        </li>
+        <li class="mineria">
+          <span></span>
+          <p>minería</p>
+        </li>
+        <li class="pesca">
+          <span></span>
+          <p>pesca y agricultura</p>
+        </li>
+        <li class="retail">
+          <span></span>
+          <p>retail y comercio</p>
+        </li>
+        <li class="financiero">
+          <span></span>
+          <p>servicios financieros</p>
+        </li>
+        <li class="salud">
+          <span></span>
+          <p>salud</p>
+        </li>
+        <li class="transporte">
+          <span></span>
+          <p>transporte</p>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="container estadisticas">
+      <h1 class="bottom-decoration">estadísticas</h1>
+      <a href="#" class="boton-accidentes-fatales">Descargar estadísticas 2014<i class="fa fa-download"></i> </a>
+      <ul>
+        <li>POR SECTORES ECONÓMICOS</li>
+        <li>POR SEXO</li>
+        <li>POR REGIÓN </li>
+        <li>TAREAS LABORALES POR SECTOR ECONÓMICO</li>
+        <li>POR TIPO DE ACCIDENTE</li>
+      </ul>
+
+    </div>
+
+    <div class="container casos-fatales casos-graves">
+      {{> casosGraves}}
+    </div>
+
+
+
+    <div class="container en-caso-accidente">
+      <a href="#" class="boton-accidentes-fatales">Descargar documento legal<i class="fa fa-download"></i> </a>
+      <h1 class="bottom-decoration">en caso de accidente grave o fatal</h1>
+      <p class="en-caso-accidente-legend">Para notificar un accidente grave o fatal la empresa debe: </p>
+      <div class="quarters-wrapper">
+        <div class="quarter suspender">
+          <h3>1. Suspender la faena afectada</h3>
+          <p>El empleador debe suspender en forma inmediata las áreas afectadas y además, de ser necesario, deberá evacuarlas cuando exista la posibilidad que ocurra un nuevo accidente de similares características. </p>
+        </div>
+        <div class="quarter informar">
+          <h3>3. INFORMAR EL ACCIDENTE</h3>
+          <p>La empresa debe informar inmediatamente al ocurrir un accidente del trabajo fatal o grave, tanto como a la Inspección del Trabajo como a la SEREMI que corresponda al lugar en que ocurrió el hecho. Esta notificación debehacerse al número único <span class="red-color">600 42 000 22 </span></p>
+        </div>
+        <div class="quarter controlar">
+          <h3>2. CONTROLAR LOS RIESGOS DE LA ZONA</h3>
+          <p>Las personas que ingresen al área afectada deberán evitar debidamente entrenadas y equipadas. </p>
+        </div>
+        <div class="entregar">
+          <h3>LA EMPRESA DEBE ENTREGAR LA SIGUIENTE INFORMACIÓN:</h3>
+          <p>
+            <ul>
+              <li>Datos de la empresa</li>
+              <li>Dirección de ocurrencia del accidente</li>
+              <li>El tipo de accidente (fatal o grave) y descripción de lo ocurrido</li>
+              <li>En los casos que la notificaciónse realice via correo electrónicoo fax, se deberá utilizar un formulario especial.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container apariciones-en-medios" id="medios">
+      <h1 class="bottom-decoration">
+        Apariciones en los medios
+      </h1>
+      <img src="menciones.png" class="menciones">
+    </div>
+  </section>
+</template>

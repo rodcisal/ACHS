@@ -9,5 +9,12 @@ Meteor.publish('casosGraves', function(){
 });
 
 
+Meteor.methods({
+	add: function (data) {
+		Casos.insert(data);
+	}
+});
+
+
 
 

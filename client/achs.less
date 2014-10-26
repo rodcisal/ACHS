@@ -65,6 +65,7 @@ body {
       background-image: none;
       background: none;
       padding-left: 10px;
+      min-height: 71px;
     }
 
     .descripcion-accidente h3,
@@ -543,6 +544,7 @@ header {
     margin-bottom: 15px;
     font-family: @helvetica;
     color: #606060;
+    min-height: 71px;
   }
 
   h3 {
@@ -1271,5 +1273,43 @@ footer {
         cursor: pointer;
       }
     }
+  }
+}
+
+
+
+.agregar-caso {
+  min-height: 600px;
+  padding: 50px 300px;
+  .input {
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  .causa, .descripcion, .lecciones-empresas, .lecciones-trabajadores, .keywords {
+    float: right;
+    margin-bottom: 10px;
+  }
+  input, select, textarea {
+    height: 40px;
+    width: 400px;
+    font-size: 17px;
+  }
+
+  textarea {
+    height: 100px;
+    font-size: 14px;
+  }
+
+  select {
+    height: 60px;
+  }
+  label, .input span {
+    margin-right: 30px;
+    font-size: 25px;
+    line-height: 40px;
+    font-family: @helvetica;
+    text-transform: uppercase;
+    position: relative;
+    top: 5px;
   }
 }

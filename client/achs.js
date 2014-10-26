@@ -11,9 +11,7 @@ Meteor.startup(function(){
   $(window).load(function(){
     $('.cycle-slideshow').cycle();
     Session.set('carouselLoaded', true);
-    console.log(Session.get('carouselLoaded'));
     $('.cycle-slideshow').on('cycle-before', function(event, opts){
-      console.log(opts.currSlide);
       if (opts.currSlide === 1){
         $('.principal-busqueda').addClass('fondo-azul').removeClass('fondo-rojo');
         $('.dropdowns').removeClass('rojo').addClass('azul');
@@ -27,36 +25,94 @@ Meteor.startup(function(){
 
 Casos = new Meteor.Collection('casos');
 
-Template.casosFatales.fichas = function() {
-  return Casos.find({"tipo_caso": {$ne: "caso-grave" } });
-}
-
-Template.principal.searching = function() {
-  if (Session.get('searching')) {
-    return true;
+Template.casosFatales.helpers({
+  fichas: function(){
+    return Casos.find({"tipo_caso": {$ne: "caso-grave" } });  
   }
-}
+});
 
-Template.casosGraves.fichas = function() {
-  return Casos.find({"tipo_caso": "caso-grave"});
-}
+Template.principal.helpers({
+  searching: function() {
+    if (Session.get('searching')) {
+      return true;
+    }
+  }
+});
+
+
+Template.casosGraves.helpers({
+  fichas: function(){
+    return Casos.find({"tipo_caso": "caso-grave"});
+  }
+});
+
+Template.searchResults.helpers({
+  busqueda: function(){
+    if (Session.get('query') !== '' && Session.get('query') !== undefined) {
+      var q = Session.get('query');
+      var results = Casos.find({keywords: q});
+      if (results.count() === 0) {
+        Session.set('showSpinner', false);
+        return false;
+      } else {
+        return results;
+      }  
+    }
+  }
+});
+
+
+Template.agregarCaso.events({
+  'click #agregar': function (e) {
+    var inputs= $('input[type="text"]'),
+        data = {},
+        vals = [],
+        lastPushed;
+
+    inputs.each(function (i, el) {
+      var attr = $(el).attr('data-field'),
+          val = $(el).val();
+          
+      if ($('input[data-field="'+attr+'"]').length === 1 && val !== '') {
+        data[attr] = val;  
+      } else {
+        if (lastPushed + 1 === $('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length && val !== '') {
+          data[attr] = vals;
+          vals = [];
+          lastPushed = undefined;
+        } else if (val !== '') {
+          lastPushed  = vals.push(val);
+          console.log(lastPushed);
+          console.log($('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length);
+        }
+      }
+      
+    });
+
+    e.preventDefault();
+    Meteor.call('add', data);
+    inputs.each(function (i, el) {
+      $(el).val('');
+    });
+
+  },
+  'change #select-tipo-caso' : function (e) {
+    $('#tipo-caso').val($('#select-tipo-caso').val());
+  }
+  ,
+  'focus #imagen-url' : function () {
+    $('#imagen-url').val('http://186.64.114.70/~alertasf/imagenes/');
+  },
+  'focus #link-pdf' : function () {
+    $('#link-pdf').val('http://186.64.114.70/~alertasf/pdf/');
+  }
+});
+
+
 
 UI.registerHelper('fichasCargadas', function() {
   return Session.get('fichasCargadas');
 });
-
-Template.searchResults.busqueda = function() {
-  var q = Session.get('query');
-  var results = Casos.find({keywords: q});
-  if (results.count() === 0) {
-    console.log('nr');
-    Session.set('showSpinner', false);
-    return false;
-  } else {
-    console.log(results.count());
-    return results;
-  }
-}
 
 
 Template.principal.events({
@@ -76,7 +132,6 @@ Template.principal.events({
 
 Template.header.events({
   'click .menu > li > a' : function(e, tmpl) {
-    console.log($(event.target));
     var $anchor = $(event.target);
     $('html, body')
     .stop() //stop the animation

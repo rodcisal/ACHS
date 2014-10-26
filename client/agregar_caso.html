@@ -1,0 +1,82 @@
+<template name="agregarCaso">
+	<div class="agregar-caso">
+		<div class="input">
+			<label for="titulo">titulo</label>
+			<input type="text" id="titulo" data-field="titulo">
+		</div>
+
+		<div class="input">
+			<label for="titulo">Tipo caso</label>
+			<input type="text" id="tipo-caso" data-field="tipo_caso" style="display:none;" value="caso-grave">
+			<select id="select-tipo-caso">
+				<option value="caso-grave">caso grave </option>
+				<option value="caso-fatal">caso fatal </option>
+			</select>
+		</div>
+
+		<div class="input">
+			<label for="titulo">numero de ficha</label>
+			<input type="text" id="numero-de-ficha" data-field="numero_ficha">
+			
+		</div>
+
+		<div class="input">
+			<label for="titulo">imagen url</label>
+			<input type="text" id="imagen-url" data-field="imagen_url">
+		</div>
+
+		<div class="input">
+			<label for="titulo">link pdf</label>
+			<input type="text" id="link-pdf" data-field="link_pdf">
+		</div>
+
+		<div class="input">
+			<label> descripcion accidente </label>
+			<input type="text" class="descripcion" data-field="descripcion_accidente">
+		</div>
+
+		<div class="input">
+			<span> causas accidente </span>
+			<input type="text" class="causa" data-field="causas_accidente"> 
+			<input type="text" class="causa" data-field="causas_accidente">
+			<input type="text" class="causa" data-field="causas_accidente">
+			<input type="text" class="causa" data-field="causas_accidente">
+			<input type="text" class="causa" data-field="causas_accidente">
+		</div>
+
+		
+
+		<div class="input">
+			<span> lecciones empresas </span>
+			<input type="text" class="lecciones-empresas" data-field="lecciones_empresas">
+			<input type="text" class="lecciones-empresas" data-field="lecciones_empresas">
+			<input type="text" class="lecciones-empresas" data-field="lecciones_empresas">
+			<input type="text" class="lecciones-empresas" data-field="lecciones_empresas">
+			<input type="text" class="lecciones-empresas" data-field="lecciones_empresas">
+		</div>
+
+		<div class="input">
+			<span> lecciones trabajadores </span>
+			<input type="text" class="lecciones-trabajadores" data-field="lecciones_trabajadores">
+			<input type="text" class="lecciones-trabajadores" data-field="lecciones_trabajadores">
+			<input type="text" class="lecciones-trabajadores" data-field="lecciones_trabajadores">
+			<input type="text" class="lecciones-trabajadores" data-field="lecciones_trabajadores">
+			<input type="text" class="lecciones-trabajadores" data-field="lecciones_trabajadores">
+		</div>
+
+		<div class="input">
+			<span> keywords </span>
+			<input type="text" class="keywords" data-field="keywords">
+			<input type="text" class="keywords" data-field="keywords">
+			<input type="text" class="keywords" data-field="keywords">
+			<input type="text" class="keywords" data-field="keywords">
+			<input type="text" class="keywords" data-field="keywords">
+		</div>
+
+
+		<a href="#" id="agregar"> Agregar </a>
+
+
+
+	</div>
+</template>

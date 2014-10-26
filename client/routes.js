@@ -5,8 +5,11 @@ Router.map(function() {
   this.route('mostrarCaso', {
     path: '/casos/:numero_ficha',
     data: function() {
-      return Casos.findOne({"numero_ficha":parseInt(this.params.numero_ficha)});
+      return Casos.findOne({"numero_ficha":this.params.numero_ficha});
     }
+  });
+  this.route('agregarCaso', {
+    path:'/agregar-caso'
   });
 });
 

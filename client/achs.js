@@ -98,16 +98,13 @@ Template.agregarCaso.events({
 
       if ($('input[data-field="'+attr+'"]').length === 1 && val !== '') {
         data[attr] = val;
-      } else {
-        if (lastPushed + 1 === $('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length && val !== '') {
+      } else if (val !== '') {
+        lastPushed  = vals.push(val);
+        if (lastPushed  === $('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length && val !== '') {
           data[attr] = vals;
           vals = [];
           lastPushed = undefined;
-        } else if (val !== '') {
-          lastPushed  = vals.push(val);
-          console.log(lastPushed);
-          console.log($('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length);
-        }
+        } 
       }
 
     });

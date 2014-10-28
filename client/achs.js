@@ -62,6 +62,29 @@ Template.searchResults.helpers({
 });
 
 
+Template.searchBar.events({
+  'click .drop > ul > li' : function (e, template) {
+    var self = $(e.currentTarget),
+        busqueda = self.html();
+    
+    if (busqueda !== '' && busqueda.length > 2 ) {
+      Session.set('searching', true);
+      Session.set('query', busqueda);
+      $('#search-results').slideDown(800);
+    } else {
+      Session.set('searching', false);
+      $('#search-results').slideUp(800);
+    }
+
+    $('.drop > ul').removeClass('displayed').addClass('hidden');
+  }, 
+  'click .drop-title' : function (e, template) {
+    var self = $(e.currentTarget);
+    self.siblings('ul').removeClass('hidden').addClass('displayed');
+  } 
+});
+
+
 Template.agregarCaso.events({
   'click #agregar': function (e) {
     var inputs= $('input[type="text"]'),
@@ -117,15 +140,7 @@ UI.registerHelper('fichasCargadas', function() {
 
 Template.principal.events({
   'blur #buscarContenido, keypress, keyup, keydown' : function(evt, ui) {
-    var busqueda = document.getElementById('buscarContenido').value;
-    if (busqueda !== '' && busqueda.length > 2 ) {
-      Session.set('searching', true);
-      Session.set('query', busqueda);
-      $('#search-results').slideDown(800);
-    } else {
-      Session.set('searching', false);
-      $('#search-results').slideUp(800);
-    }
+
   }
 });
 

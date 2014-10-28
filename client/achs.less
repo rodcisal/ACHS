@@ -1,4 +1,4 @@
-  /* CSS declarations go here */
+/* CSS declarations go here */
 
 /* Reset */
 
@@ -1218,7 +1218,6 @@ footer {
     }
 
     &:hover ul {
-      display: block;
       cursor: pointer;
     }
 
@@ -1251,10 +1250,12 @@ footer {
       padding: 0;
       position: relative;
       z-index: 2;
-      width: 302px;
+      width: 298px;
       left: -20px;
       background: #fff;
-      box-shadow: 2px 4px 4px #ccc;
+
+      &.displayed {display: block;}
+      &.hidden {display: none;}
 
       li {
         padding-left: 20px;

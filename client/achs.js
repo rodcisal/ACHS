@@ -27,7 +27,7 @@ Casos = new Meteor.Collection('casos');
 
 Template.casosFatales.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": {$ne: "caso-grave" } });  
+    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3});
   }
 });
 
@@ -42,7 +42,7 @@ Template.principal.helpers({
 
 Template.casosGraves.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": "caso-grave"});
+    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3});
   }
 });
 
@@ -56,7 +56,7 @@ Template.searchResults.helpers({
         return false;
       } else {
         return results;
-      }  
+      }
     }
   }
 });
@@ -95,9 +95,9 @@ Template.agregarCaso.events({
     inputs.each(function (i, el) {
       var attr = $(el).attr('data-field'),
           val = $(el).val();
-          
+
       if ($('input[data-field="'+attr+'"]').length === 1 && val !== '') {
-        data[attr] = val;  
+        data[attr] = val;
       } else {
         if (lastPushed + 1 === $('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length && val !== '') {
           data[attr] = vals;
@@ -109,7 +109,7 @@ Template.agregarCaso.events({
           console.log($('input[data-field="'+attr+'"]').filter(function() { return $(this).val() !== ''}).length);
         }
       }
-      
+
     });
 
     e.preventDefault();

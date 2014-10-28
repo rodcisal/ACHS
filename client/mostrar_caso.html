@@ -27,19 +27,19 @@
           <h3>lecciones aprendidas</h3>
           <div class="para-trabajadores">
             <h4>Trabajadores</h4>
-            {{#each lecciones_trabajadores}}
             <ol>
+              {{#each lecciones_trabajadores}}
               <li>{{this}}</li>
+              {{/each}}
             </ol>
-            {{/each}}
           </div>
           <div class="para-empresas">
             <h4>Empresa</h4>
-            {{#each lecciones_empresas}}
             <ol>
+              {{#each lecciones_empresas}}
               <li>{{this}}</li>
+              {{/each}}
             </ol>
-            {{/each}}
           </div>
           <div class="botones">
             <a href="{{link_pdf}}" class="descargar descargar-pdf">DESCARGAR PDF <i class="fa fa-download"></i></a>

@@ -66,7 +66,7 @@ Template.searchBar.events({
   'click .drop > ul > li' : function (e, template) {
     var self = $(e.currentTarget),
         busqueda = self.html();
-    
+  
     if (busqueda !== '' && busqueda.length > 2 ) {
       Session.set('searching', true);
       Session.set('query', busqueda);
@@ -77,9 +77,12 @@ Template.searchBar.events({
     }
 
     $('.drop > ul').removeClass('displayed').addClass('hidden');
+
+
   }, 
   'click .drop-title' : function (e, template) {
     var self = $(e.currentTarget);
+    $('.displayed').removeClass('displayed');
     self.siblings('ul').removeClass('hidden').addClass('displayed');
   } 
 });

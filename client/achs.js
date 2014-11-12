@@ -20,6 +20,11 @@ Meteor.startup(function(){
         $('.dropdowns').removeClass('azul').addClass('rojo');
       }
     });
+    $(document).click(function(e) {
+      if (e.target.className !== 'drop-title'){
+        $('.displayed').removeClass('displayed');
+      }
+    });
   });
 });
 
@@ -38,6 +43,50 @@ Template.principal.helpers({
     }
   }
 });
+
+Template.principal.rendered = function () {
+  $('.estadisticas ul li:first-child').qtip({
+    content: {
+      text: '<img src="/Diapositiva1.png">'
+    },
+    position: {
+      target: 'mouse'
+    }
+  });
+  $('.estadisticas ul li:nth-child(2)').qtip({
+    content: {
+      text: '<img src="/Diapositiva2.png">'
+    },
+    position: {
+      target: 'mouse'
+    }
+  });
+  $('.estadisticas ul li:nth-child(3)').qtip({
+    content: {
+      text: '<img src="/Diapositiva3.png">'
+    },
+    position: {
+      my: 'top left',
+      at: 'bottom right'
+    }
+  });
+  $('.estadisticas ul li:nth-child(4)').qtip({
+    content: {
+      text: '<img src="/Diapositiva4.png">'
+    },
+    position: {
+      target: 'mouse'
+    }
+  });
+  $('.estadisticas ul li:nth-child(5)').qtip({
+    content: {
+      text: '<img src="/Diapositiva4.png">'
+    },
+    position: {
+      target: 'mouse'
+    }
+  });
+}
 
 
 Template.casosGraves.helpers({

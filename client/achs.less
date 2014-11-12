@@ -523,6 +523,9 @@ header {
   h1:after {
     width: 390px;
   }
+  h1 {
+    margin-bottom: 50px;
+  }
 }
 
 
@@ -678,10 +681,23 @@ header {
     background-color: #4C77C3;
     border-bottom: 4px solid #3669b3;
   }
+  .caso h3 {
+    height: 70px;
+  }
 }
 
 .estadisticas {
   position: relative;
+
+  .popup {
+    position: absolute; 
+    top: 0;
+    left: 200px;
+    z-index: 2;
+    img {
+      box-shadow: 2px 2px 4px #000000;
+    }
+  }
   .bottom-decoration:after {
     background-color: #187745;
   }
@@ -1260,6 +1276,8 @@ footer {
       li {
         padding-left: 20px;
         font-size: 16px;
+        height: 30px;
+        line-height: 30px;
         &:hover {
           background-color: #888;
           color: #fff;
@@ -1308,5 +1326,52 @@ footer {
     text-transform: uppercase;
     position: relative;
     top: 5px;
+  }
+}
+
+
+.qtip {
+  border-color: transparent !important;
+  background-color: transparent !important;
+
+  .qtip-content {
+    position: absolute !important;
+  }
+}
+
+.medios-noticia-unit {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2%;
+}
+
+.medios-fecha {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.medios-title {
+  font-family: @helvetica;
+  font-size: 17px;
+  margin-top: 20px;
+  min-height: 60px;
+}
+
+.noticia-img {
+  max-width: 100%;
+  position: relative;
+  min-height: 225px;
+  img {
+    width: 100%;
+  }
+}
+
+.ver-todas-las-noticias {
+  text-align: right;
+  padding-top: 40px;
+  a {
+    color: #ed4729;
+    text-decoration: none;
   }
 }

@@ -18,7 +18,7 @@
         </div>
         <ul class="menu">
           <li class="inicio"><a href="{{pathFor 'principal'}}">Inicio</a></li>
-          <li class="legislacion"><a href="#">Legislación</a></li>
+          <li class="legislacion"><a href="http://186.64.114.70/~alertasf/pdf/legislacion-circular.pdf">Legislación</a></li>
           <li class="medios"><a href="#medios">Medios</a> </li>
         </ul>
       </div>
@@ -26,6 +26,8 @@
     <section class="principal">
       {{> yield}}
     </section>
+    <div id="overlay-pagina" style="display: none;">
+    </div>
     <footer>
       <div class="container">
         <a href="https://www.facebook.com/PrevencionACHS" class="facebook" target="_blank">

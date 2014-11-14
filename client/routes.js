@@ -8,6 +8,9 @@ Router.map(function() {
       return Casos.findOne({"numero_ficha":this.params.numero_ficha});
     }
   });
+  this.route('listadoNoticias', {
+    path: '/noticias'
+  });
   this.route('agregarCaso', {
     path:'/agregar-caso'
   });

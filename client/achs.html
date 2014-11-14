@@ -1,6 +1,9 @@
 <head>
   <title>achs</title>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="ie.css" />
+  <![endif]-->
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         </div>
         <ul class="menu">
           <li class="inicio"><a href="{{pathFor 'principal'}}">Inicio</a></li>
-          <li class="legislacion"><a href="http://186.64.114.70/~alertasf/pdf/legislacion-circular.pdf">Legislación</a></li>
+          <li class="legislacion"><a href="http://186.64.114.70/~alertasf/pdf/legislacion-circular.pdf" target="_blank">Legislación</a></li>
           <li class="medios"><a href="#medios">Medios</a> </li>
         </ul>
       </div>
@@ -48,6 +51,62 @@
         </div>
       </div>
     </footer>
+  </div>
+</template>
+
+<template name="listadoNoticias">
+  <div class="container apariciones-en-medios listado-noticias">
+    <h1 class="bottom-decoration">
+      Apariciones en los medios
+    </h1>
+    <div class="noticia">
+      <h2><a target="_blank" href="http://www.litoralpress.cl/design3/lpi/mostrarjpg.asp?id=30628430&idT=700878&ve=1">Cada día muere un chileno por accidentes relacionados al trabajo</a></h2>
+      <p>Fuente: HSEC</p>
+    </div>
+    <div class="noticia">
+      <h2><a target="_blank" href="http://www.litoralpress.cl/design3/lpi/mostrarjpg.asp?id=30628430&idT=700878&ve=1">40% DISMINUYERON LOS ACCIDENTES FATALES EN LOS LUGARES DE TRABAJO DURANTE EL PRIMER SEMESTRE DE 2014</a></h2>
+      <p>Fuente: La Tercera - STGO CHILE - 03/08/2014</p>
+    </div>
+    <div class="noticia">
+      <h2><a target="_blank" href="http://www.litoralpress.cl/design3/lpi/mostrarjpg.asp?id=30650421&idT=700878&ve=1">Baja en accidentes laborales</a></h2>
+      <p>Fuente: Publimetro - 05/08/2014</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.maray.cl/2014/08/achs-entrego-cifras-fatales-del-primer-semestre-2014-todos-los-dias-muere-un-chileno-por-accidentes-relacionados-al-trabajo/" target="_blank">ACHS entregó cifras fatales del primer semestre 2014: Todos los días muere un chileno por accidentes relacionados al trabajo</a></h2>
+      <p>Fuente: Radio Maray</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.diariopyme.cl/achs-disminuye-el-numero-de-accidentes-laborales-durante-el-primer-semestre-del-ano/prontus_diariopyme/2014-08-04/165546.html" target="_blank">ACHS: disminuye el número de accidentes laborales durante el primer semestre del año</a></h2>
+      <p>Fuente: Diario PYME</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.litoralpress.cl/design3/lpi/mostrarjpg.asp?id=30660176,30660183,30660187,30660190,30660194&idT=700878&ve=1" target="_blank">ACCIDENTABILIDAD LABORAL ANOTA MINIMO HISTORICO Y ABRE NUEVAS OPORTUNIDADES</a></h2>
+      <p>Fuente: Diario El Pulso  -  06/08/2014</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.litoralpress.cl/design3/lpi/mostrarjpg.asp?id=30660590,30660595&idT=700878&ve=1" target="_blank">BAJAN LOS ACCIDENTES LABORALES EN EL PRIMER SEMESTRE DEL AÑO</a></h2>
+      <p>Fuente: Publimetro STGO CHILE - 06/08/2014</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.pulso.cl/noticia/tech/sustentabilidad/2014/08/75-47877-9-accidentabilidad-laboral-anota-minimo-historico-y-abre-nuevas-oportunidades.shtml" target="_blank">Accidentabilidad laboral anota mínimo histórico y abre nuevas oportunidades</a></h2>
+      <p>Fuente: Pulso</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://caserones.comunicatacama.cl/imagenes_37466.html" target="_blank">Entregan recomendaciones para disminuir accidentes en minería</a></h2>
+      <p>Fuente: Caserones</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.portalminero.com/pages/viewpage.action?pageId=93324500" target="_blank">AChS, baja fatalidad en empresas</a></h2>
+      <p>Fuente: Portal Minero</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.portalminero.com/display/NOT/2014/08/05/Achs,%20baja%20fatalidad%20en%20empresas" target="_blank">AChS, baja fatalidad en empresas</a></h2>
+      <p>Fuente: Portal Minero</p>
+    </div>
+    <div class="noticia">
+      <h2><a href="http://www.sustentare.cl/2014/08/05/entregan-recomendaciones-para-disminuir-accidentes-en-mineria/" target="_blank">Entregan recomendaciones para disminuir accidentes en minería</a></h2>
+      <p>Fuente: Sunstentare</p>
+    </div>
   </div>
 </template>
 

@@ -49,7 +49,8 @@ Template.principal.rendered = function () {
   var nombreImagen = $(this).data('nombre-imagen'); 
   $.modal('<div><img src="/'+nombreImagen+'"></div>', {
     overlayId: 'overlay-pagina',
-    overlayClose: true
+    overlayClose: true,
+    position: [150, '25%']
   });
  });
 }

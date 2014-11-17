@@ -47,10 +47,11 @@ Template.principal.helpers({
 Template.principal.rendered = function () {
  $('.abrir-modal').click(function() {
   var nombreImagen = $(this).data('nombre-imagen'); 
-  $.modal('<div><img src="/'+nombreImagen+'"></div>', {
+  $.modal('<div class="modal-wrapper"><img src="/'+nombreImagen+'"><div class="fa-wrapper"><i class="fa fa-times"></i></div></div>', {
     overlayId: 'overlay-pagina',
     overlayClose: true,
-    position: [150, '25%']
+    position: [60, '25%'],
+    closeClass: 'fa-wrapper'
   });
  });
 }
@@ -77,6 +78,12 @@ Template.searchResults.helpers({
   }
 });
 
+Template.searchResults.events({
+  'click .close-search-slide' : function () {
+    $('#search-results').slideUp(800);
+  }
+});
+
 
 Template.searchBar.events({
   'click .drop > ul > li' : function (e, template) {
@@ -87,6 +94,11 @@ Template.searchBar.events({
       Session.set('searching', true);
       Session.set('query', busqueda);
       $('#search-results').slideDown(800);
+      $('.sectores > .drop-title').html('Sectores');
+      $('.procesos > .drop-title').html('Procesos');
+      $('.tipos-de-accidente > .drop-title').html('Tipos de accidente');
+      self.parent().siblings('.drop-title').html(busqueda);
+
     } else {
       Session.set('searching', false);
       $('#search-results').slideUp(800);

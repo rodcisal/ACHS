@@ -9,7 +9,7 @@ Session.setDefault('searching', false);
 
 Meteor.startup(function(){
   $(window).load(function(){
-    $('.cycle-slideshow').cycle();
+    $('.cycle-slideshow').cycle({timeout: 8000});
     Session.set('carouselLoaded', true);
     $('.cycle-slideshow').on('cycle-before', function(event, opts){
       if (opts.currSlide === 1){
@@ -32,7 +32,7 @@ Casos = new Meteor.Collection('casos');
 
 Template.casosFatales.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3});
+    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3, sort: {"numero_ficha": -1} });
   }
 });
 
@@ -59,7 +59,7 @@ Template.principal.rendered = function () {
 
 Template.casosGraves.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3});
+    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3, sort: {"numero_ficha": -1} });
   }
 });
 
@@ -94,10 +94,10 @@ Template.searchBar.events({
       Session.set('searching', true);
       Session.set('query', busqueda);
       $('#search-results').slideDown(800);
-      $('.sectores > .drop-title').html('Sectores');
-      $('.procesos > .drop-title').html('Procesos');
-      $('.tipos-de-accidente > .drop-title').html('Tipos de accidente');
-      self.parent().siblings('.drop-title').html(busqueda);
+      $('.sectores > .drop-title').html('Sectores <i class="fa fa-chevron-down"></i>');
+      $('.procesos > .drop-title').html('Procesos <i class="fa fa-chevron-down"></i>');
+      $('.tipos-de-accidente > .drop-title').html('Tipos de accidente <i class="fa fa-chevron-down"></i>');
+      self.parent().siblings('.drop-title').html(busqueda+ ' <i class="fa fa-chevron-down"></i>');
 
     } else {
       Session.set('searching', false);

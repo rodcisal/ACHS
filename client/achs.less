@@ -42,8 +42,17 @@ font-weight: normal;
 src: url('Helvetica-Neue-LT.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Din';
+  src: url('din-regular-webfont.eot');
+  src: url('din-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @helvetica : 'Helvetica Neue LT Com 77 Bold Condensed';
 @open : 'open_sanslight';
+@din : 'Din';
 
 body {
   font-family: 'open_sansregular';
@@ -108,11 +117,11 @@ header {
       color: #006931;
       width: 550px;
       float: left;
-      font-size: 36px;
-      font-family: @helvetica;
+      font-size: 32px;
+      font-family: @din;
       line-height: 35px;
       letter-spacing: -1px;
-      padding-top: 24px;
+      padding-top: 18px;
 
       a, a:link, a:visited {
         color: inherit;
@@ -217,7 +226,7 @@ header {
 .principal-contenido {
   min-height: 400px;
   h1 {
-    font-size: 30px;
+    font-size: 26px;
     color: #606060;
     border-bottom: 2px solid #dedfd5;
     position: relative;
@@ -225,7 +234,8 @@ header {
 }
 
 .bottom-decoration {
-  font-family: @helvetica;
+  font-family: @din;
+  padding-bottom: 10px;
   text-transform: uppercase;
   &:after {
     content: "";
@@ -240,7 +250,7 @@ header {
 
 .cifras {
   h1 {
-    font-size: 27px;
+    font-size: 23px;
   }
   .bottom-decoration:after {
     width: 100%;
@@ -254,7 +264,7 @@ header {
 
   ul li {
     width: 100px;
-    height: 230px;
+    height: 300px;
     float: left;
     text-align: center;
     margin-right: 34px;
@@ -271,6 +281,8 @@ header {
       color: #919191;
       font-family: 'open_sanslight';
       padding-top: 5px;
+      padding-bottom: 10px;
+      min-height: 47px;
 
     }
 
@@ -497,14 +509,15 @@ header {
 .leer-mas {
   width: 273px;
   height: 43px;
-  background-color: #f0333e;
+  background-color: #f14751;
   display: block;
   margin-top: 10px;
   color: #ffffff;
   line-height: 43px;
   text-align: center;
   text-decoration: none;
-  border-bottom: 4px solid #f0333e;
+  border-bottom: 4px solid #db000d;
+  font-family: @din;
 
   &:hover {
     opacity: 0.8;
@@ -770,7 +783,7 @@ header {
 
   li:nth-child(4) {
     &:after {
-      background-image: url(/icono4.png);
+      background-image: url(/Group-10-1.png);
       top: 28px;
       left: 62px;
     }
@@ -802,6 +815,7 @@ header {
   right: 0;
   transition: opacity 0.3s ease-in;
   opacity: 1;
+  font-family: @din;
 
   i {
     margin-left: 7px;
@@ -839,12 +853,13 @@ header {
   padding-top: 70px;
   position: relative;
 
-  .close-search-slide {
-    top: 3px;
-    right: 5px;
-    position: absolute;
-    color: #656565;
-  }
+}
+
+.close-search-slide {
+  top: 3px;
+  right: 5px;
+  position: absolute;
+  color: #656565;
 }
 
 .search-results-unit {
@@ -945,7 +960,7 @@ header {
   > a.boton-accidentes-fatales {
     background-color: #f14751;
     border-bottom-color: #db000d;
-    top: 38px;
+    top: 44px;
   }
 
   .bottom-decoration:after {
@@ -1117,6 +1132,7 @@ footer {
     width: 258px;
     margin-right: 30px;
     margin-top: 20px;
+    font-family: @din;
     &:hover {
       opacity: 0.8;
     }
@@ -1219,13 +1235,39 @@ footer {
   color: #888888;
   font-family: 'open_sansregular';
   padding-top: 30px;
+  position: relative;
 }
 
 
 .dropdowns {
   border: 25px solid #4979bd;
   border-top: 0; 
-  transition: border-color 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  padding-left: 50px;
+  position: relative;
+  &:before {
+    content: "\f002";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'fontAwesome';
+    font-size: 32px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #A6BDE1;
+    color: #ffffff;
+  }
+
+  &.rojo:before {
+    background-color: #f6a8a7;
+  }
+
+  &.azul:before {
+    background-color: #A6BDE1;
+  }
+
   &.rojo {
     border-color: #ED5250;
   }
@@ -1282,7 +1324,7 @@ footer {
       padding: 0;
       position: relative;
       z-index: 2;
-      width: 298px;
+      width: 288px;
       left: -20px;
       background: #fff;
 
@@ -1402,10 +1444,14 @@ footer {
 
 .noticia {
   padding-bottom: 30px;
+  h2 {
+    color: #606060;
+  }
   h2 a {
     font-size: 20px;
     font-family: @helvetica;
     text-decoration: none;
+    color: #606060;
     &:visited, &:link, &:active { color: inherit; }
   }
 }
@@ -1432,4 +1478,48 @@ footer {
       background-color: #656565;
     }
   }
+}
+
+
+#simplemodal-container {
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+
+
+#medios.container h1.bottom-decoration {
+  margin-bottom: 20px;
+
+  &:after {
+    width: 385px;
+  }
+}
+
+
+.person {
+  width: 14px;
+  height: 30px;
+  background-image: url('person.png');
+  display: inline-block;
+  vertical-align: top;
+  background-position: top;
+  margin-left: 1px;
+}
+
+
+.cifras .bottom-decoration.cantidad-fallecidos:after {
+  width: 88%;
+}
+
+.just-fatales {
+  padding-bottom: 50px;
+  .descripcion-caso {
+    display: none;
+  }
+
+  .imagen-ficha-home {
+    position: relative;
+    top: -40px;
+  }
+
 }

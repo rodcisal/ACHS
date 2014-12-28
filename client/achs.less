@@ -36,13 +36,6 @@ dt, dd, blockquote, address{
 }
 
 @font-face {
-font-family: 'Helvetica Neue LT Com 77 Bold Condensed';
-font-style: normal;
-font-weight: normal;
-src: url('Helvetica-Neue-LT.woff') format('woff');
-}
-
-@font-face {
   font-family: 'Din';
   src: url('din-regular-webfont.eot');
   src: url('din-regular-webfont.woff') format('woff');
@@ -50,7 +43,22 @@ src: url('Helvetica-Neue-LT.woff') format('woff');
   font-style: normal;
 }
 
-@helvetica : 'Helvetica Neue LT Com 77 Bold Condensed';
+@font-face {
+  font-family: 'Din';
+  src: url('din-medium-webfont.eot');
+  src: url('din-medium-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Din';
+  src: url('din-light-webfont.eot');
+  src: url('din-light-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
 @open : 'open_sanslight';
 @din : 'Din';
 
@@ -121,7 +129,8 @@ header {
       font-family: @din;
       line-height: 35px;
       letter-spacing: -1px;
-      padding-top: 18px;
+      padding-top: 25px;
+      font-weight: 600;
 
       a, a:link, a:visited {
         color: inherit;
@@ -279,7 +288,6 @@ header {
     p {
       text-transform: uppercase;
       color: #919191;
-      font-family: 'open_sanslight';
       padding-top: 5px;
       padding-bottom: 10px;
       min-height: 47px;
@@ -389,7 +397,7 @@ header {
     font-size: 17px;
     padding-bottom: 15px;
     line-height: 17px;
-    font-family: @helvetica;
+    font-family: @din;
     font-weight: normal;
     height: 60px;
     overflow: hidden;
@@ -528,14 +536,14 @@ header {
 .casos-fatales {
   h1 {
     &:after {
-      width: 200px;
+      width: 182px;
     }
   }
 }
 
 .apariciones-en-medios {
   h1:after {
-    width: 390px;
+    width: 415px;
   }
   h1 {
     margin-bottom: 30px;
@@ -567,7 +575,7 @@ header {
     background: url('signo-exclamacion.png') no-repeat left center;
     border-bottom: 4px solid #f0333e;
     margin-bottom: 15px;
-    font-family: @helvetica;
+    font-family: @din;
     color: #606060;
     min-height: 71px;
   }
@@ -719,6 +727,7 @@ header {
   }
   .bottom-decoration:after {
     background-color: #187745;
+    width: 173px;
   }
   ul {
     font-size: 0;
@@ -874,9 +883,8 @@ header {
   h3 {
     font-size: 14px;
     padding-bottom: 10px;
-    font-family: @helvetica;
+    font-family: @din;
     text-align: left;
-    font-weight: lighter;
     min-height: 80px;
 
     a {
@@ -952,7 +960,7 @@ header {
 .en-caso-accidente {
   position: relative;
   .quarter > h3 {
-    font-family: @helvetica;
+    font-family: @din;
     text-transform: uppercase;
     color: #ed4729;
   }
@@ -960,11 +968,11 @@ header {
   > a.boton-accidentes-fatales {
     background-color: #f14751;
     border-bottom-color: #db000d;
-    top: 44px;
+    top: 39px;
   }
 
   .bottom-decoration:after {
-    width: 515px;
+    width: 485px;
   }
 }
 
@@ -976,7 +984,7 @@ header {
   padding-left: 0;
   > h3 {
     font-size: 14px;
-    font-family: @helvetica;
+    font-family: @din;
     margin-left: 60px;
     background-color: #fbdad4;
     padding-left: 10px;
@@ -1380,7 +1388,7 @@ footer {
     margin-right: 30px;
     font-size: 25px;
     line-height: 40px;
-    font-family: @helvetica;
+    font-family: @din;
     text-transform: uppercase;
     position: relative;
     top: 5px;
@@ -1410,7 +1418,7 @@ footer {
 }
 
 .medios-title {
-  font-family: @helvetica;
+  font-family: @din;
   font-size: 17px;
   margin-top: 20px;
   min-height: 60px;
@@ -1449,7 +1457,7 @@ footer {
   }
   h2 a {
     font-size: 20px;
-    font-family: @helvetica;
+    font-family: @din;
     text-decoration: none;
     color: #606060;
     &:visited, &:link, &:active { color: inherit; }
@@ -1491,7 +1499,7 @@ footer {
   margin-bottom: 20px;
 
   &:after {
-    width: 385px;
+    width: 359px;
   }
 }
 
@@ -1508,18 +1516,21 @@ footer {
 
 
 .cifras .bottom-decoration.cantidad-fallecidos:after {
-  width: 88%;
+  width: 780px;
 }
 
 .just-fatales {
   padding-bottom: 50px;
+  > h1.bottom-decoration:after {
+    width: 193px;
+  }
   .descripcion-caso {
     display: none;
   }
 
   .imagen-ficha-home {
     position: relative;
-    top: -40px;
+    top: -25px;
   }
 
 }

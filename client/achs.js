@@ -32,7 +32,7 @@ Casos = new Meteor.Collection('casos');
 
 Template.casosFatales.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3, sort: {"numero_ficha": -1} });
+    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3, sort: {"numero_ficha": -1} }).fetch().reverse();
   }
 });
 
@@ -59,7 +59,7 @@ Template.principal.rendered = function () {
 
 Template.casosGraves.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3, sort: {"numero_ficha": -1} });
+    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3, sort: {"numero_ficha": -1} }).fetch().reverse();
   }
 });
 

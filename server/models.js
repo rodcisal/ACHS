@@ -16,5 +16,10 @@ Meteor.methods({
 });
 
 
+//Kadira
+
+Kadira.connect('Xd46j9KXKx3FB9T4r', 'a74776db-90b9-4c42-ab1f-706a7ba37347')
+
+
 
 

@@ -44,3 +44,7 @@ animateContentIn = function() {
 }
 Router.onAfterAction(animateContentIn);
 
+//allow analytics tracking
+Router.configure({
+  trackPageView: true
+});

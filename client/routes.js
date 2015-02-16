@@ -11,9 +11,9 @@ Router.map(function() {
   this.route('listadoNoticias', {
     path: '/noticias'
   });
-  this.route('agregarCaso', {
-    path:'/agregar-caso'
-  });
+  // this.route('agregarCaso', {
+  //   path:'/agregar-caso'
+  // });
 });
 
 Router.configure({

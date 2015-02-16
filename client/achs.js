@@ -32,7 +32,7 @@ Casos = new Meteor.Collection('casos');
 
 Template.casosFatales.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 3, sort: {"numero_ficha": -1} }).fetch().reverse();
+    return Casos.find({"tipo_caso": {$ne: "caso-grave" }}, {limit: 1, sort: {"numero_ficha": -1} }).fetch().reverse();
   }
 });
 
@@ -46,7 +46,7 @@ Template.principal.helpers({
 
 Template.principal.rendered = function () {
  $('.abrir-modal').click(function() {
-  var nombreImagen = $(this).data('nombre-imagen'); 
+  var nombreImagen = $(this).data('nombre-imagen');
   $.modal('<div class="modal-wrapper"><img src="/'+nombreImagen+'"><div class="fa-wrapper"><i class="fa fa-times"></i></div></div>', {
     overlayId: 'overlay-pagina',
     overlayClose: true,

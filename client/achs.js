@@ -59,7 +59,7 @@ Template.principal.rendered = function () {
 
 Template.casosGraves.helpers({
   fichas: function(){
-    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 3, sort: {"numero_ficha": -1} }).fetch().reverse();
+    return Casos.find({"tipo_caso": "caso-grave"}, {limit: 2, sort: {"numero_ficha": -1} }).fetch().reverse();
   }
 });
 
@@ -89,16 +89,22 @@ Template.searchBar.events({
   'click .drop > ul > li' : function (e, template) {
     var self = $(e.currentTarget),
         busqueda = self.html();
-  
+
     if (busqueda !== '' && busqueda.length > 2 ) {
       Session.set('searching', true);
       Session.set('query', busqueda);
       $('#search-results').slideDown(800);
+      if (self.parent().parent().attr('class') === 'drop sectores') {
+        console.log($('.estadisticas-procesos'));
+        $('.estadisticas-procesos').css('display', 'block');
+      } else {
+        $('.estadisticas-procesos').css('display', 'none');
+      }
+      console.log(self.parent().parent().attr('class') === 'drop sectores');
       $('.sectores > .drop-title').html('Sectores <i class="fa fa-chevron-down"></i>');
       $('.procesos > .drop-title').html('Procesos <i class="fa fa-chevron-down"></i>');
       $('.tipos-de-accidente > .drop-title').html('Tipos de accidente <i class="fa fa-chevron-down"></i>');
       self.parent().siblings('.drop-title').html(busqueda+ ' <i class="fa fa-chevron-down"></i>');
-
     } else {
       Session.set('searching', false);
       $('#search-results').slideUp(800);
@@ -107,12 +113,12 @@ Template.searchBar.events({
     $('.drop > ul').removeClass('displayed').addClass('hidden');
 
 
-  }, 
+  },
   'click .drop-title' : function (e, template) {
     var self = $(e.currentTarget);
     $('.displayed').removeClass('displayed');
     self.siblings('ul').removeClass('hidden').addClass('displayed');
-  } 
+  }
 });
 
 

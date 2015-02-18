@@ -105,9 +105,6 @@ body {
 header {
   height: 110px;
   background-color: #fff;
-  -webkit-box-shadow: -5px 3px 8px rgba(0,0,0,.27);
-  -moz-box-shadow: -5px 3px 8px rgba(0,0,0,.27);
-  box-shadow: -5px 3px 8px rgba(0,0,0,.27);
   width: 100%;
   color: #606060;
   position: relative;
@@ -206,15 +203,15 @@ header {
   height: 250px;
   width: 100%;
   position: relative;
-  background-color: #4979bd;
+  background-color: #4E79C1;
   transition: background-color 0.3s ease-in;
 
   &.fondo-rojo {
-    background-color: #ED5250;
+    background-color: #EB5354;
   }
 
   &.fondo-azul {
-    background-color: #4979bd;
+    background-color: #4E79C1;
   }
 
   > .container {
@@ -422,6 +419,7 @@ header {
     max-height: 55px;
     overflow: hidden;
     position: relative;
+    display: none;
 
     &:after {
       content: "...";
@@ -1533,7 +1531,17 @@ footer {
 
   .imagen-ficha-home {
     position: relative;
-    top: -25px;
   }
 
+}
+
+.estadisticas-procesos {
+  margin-left: 40px;
+  text-align: center;
+  margin-top: 40px;
+  display: none;
+
+  .caso {
+    margin-bottom: 0;
+  }
 }

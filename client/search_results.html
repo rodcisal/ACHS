@@ -1,7 +1,7 @@
 <template name="searchResults">
   <section id="search-results">
     <div class="container">
-      {{#if busqueda}}        
+      {{#if busqueda}}
         <h1 class="casos-encontrados">Casos Encontrados <a href="#" class="close-search-slide">
         <i class="fa fa-times"></i></a></h1>
         {{#each busqueda}}
@@ -15,6 +15,25 @@
         <span class="no-hay-resultados"> Intenta con otra palabra :/  <a href="#" class="close-search-slide">
         <i class="fa fa-times"></i></a></span>
       {{/if}}
+      <div class="estadisticas-procesos">
+        <article class="caso">
+          <h3><a href="http://www.alertasfatales.cl/estadisticas/estadisticas_fatales_2014.pdf">Estadísticas fatales 2014</a></h3>
+          <span>
+            <img src="http://www.alertasfatales.cl/estadisticas/estadisticas_2014.png" class="imagen-ficha-home">
+          </span>
+          <div class="numero-ficha"> Estadísticas </div>
+          <a href="http://www.alertasfatales.cl/estadisticas/estadisticas_fatales_2014.pdf" class="leer-mas"> Leer más <i class="fa fa-chevron-right"></i></a>
+        </article>
+        <!-- estadistica 1 -->
+        <article class="caso">
+          <h3><a href="http://www.alertasfatales.cl/estadisticas/estadisticas_amputados_2014.pdf">Estadísticas Amputados 2014</a></h3>
+          <span>
+            <img src="http://www.alertasfatales.cl/estadisticas/amputaciones_2014.png" class="imagen-ficha-home">
+          </span>
+          <div class="numero-ficha"> Estadísticas </div>
+          <a href="http://www.alertasfatales.cl/estadisticas/estadisticas_amputados_2014.pdf" class="leer-mas"> Leer más <i class="fa fa-chevron-right"></i></a>
+        </article>
+      </div>
     </div>
   </section>
 </template>
